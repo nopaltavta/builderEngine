@@ -1,0 +1,24 @@
+# Build outputs (rebuildable; never commit)
+[Bb]in/
+[Oo]bj/
+out/
+[Aa]rtifacts/
+
+# Release zips + publish staging (use GitHub Releases for downloads instead)
+*.zip
+builder/bin/publish/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store

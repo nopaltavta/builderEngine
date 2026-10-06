@@ -1,0 +1,125 @@
+<UserControl x:Class="builder.ToolboxPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="ToolboxTab" TargetType="RadioButton">
+            <Setter Property="Width" Value="44" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Background" Value="#FF2D2D30" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border Background="{TemplateBinding Background}" Padding="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Background" Value="#FF007ACC" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF3F3F46" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ToolboxList" TargetType="ListBox">
+            <Setter Property="Background" Value="#FF1E1E1E" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="Padding" Value="8,4" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border x:Name="Bd" Background="Transparent" Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Bd" Property="Background" Value="#FF007ACC" />
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Bd" Property="Background" Value="#FF3F3F46" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+    <DockPanel Background="#FF252526">
+        <TextBlock DockPanel.Dock="Top" Text="Toolbox" Foreground="White" FontWeight="SemiBold" Margin="8,6,8,4" />
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="6,0,6,6">
+            <RadioButton x:Name="TabParts" Style="{StaticResource ToolboxTab}" GroupName="ToolboxTabs"
+                          ToolTip="Parts (shapes, lights, spawn)" Checked="Tab_Checked" IsChecked="True">
+                <Image Source="Icons/toolbox.png" Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" />
+            </RadioButton>
+            <RadioButton x:Name="TabProps" Style="{StaticResource ToolboxTab}" GroupName="ToolboxTabs"
+                          ToolTip="Props (physics toys, visuals, NPCs)" Checked="Tab_Checked">
+                <Image Source="Icons/object.png" Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" />
+            </RadioButton>
+            <RadioButton x:Name="TabImages" Style="{StaticResource ToolboxTab}" GroupName="ToolboxTabs"
+                          ToolTip="Images (built-in decals)" Checked="Tab_Checked">
+                <Image Source="Icons/decal.png" Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" />
+            </RadioButton>
+            <RadioButton x:Name="TabSounds" Style="{StaticResource ToolboxTab}" GroupName="ToolboxTabs"
+                          ToolTip="Sounds (built-in effects)" Checked="Tab_Checked">
+                <Image Source="Icons/sound.png" Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" />
+            </RadioButton>
+            <RadioButton x:Name="TabSaved" Style="{StaticResource ToolboxTab}" GroupName="ToolboxTabs"
+                          ToolTip="Saved models (your library)" Checked="Tab_Checked">
+                <Image Source="Icons/save.png" Width="24" Height="24" RenderOptions.BitmapScalingMode="HighQuality" />
+            </RadioButton>
+        </StackPanel>
+        <StackPanel x:Name="ModelButtons" DockPanel.Dock="Top" Orientation="Horizontal" Margin="6,0,6,6" Visibility="Collapsed">
+            <Button Content="Add model" Padding="10,3" Margin="0,0,6,0" Click="AddModel_Click"
+                    Background="#FF3F3F46" Foreground="White" BorderBrush="#FF555555" BorderThickness="1"
+                    ToolTip="Save the current selection as a model" />
+            <Button Content="Remove" Padding="10,3" Click="RemoveModel_Click"
+                    Background="#FF3F3F46" Foreground="White" BorderBrush="#FF555555" BorderThickness="1"
+                    ToolTip="Delete the selected saved model" />
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="92" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="CategoryList" Grid.Column="0" Style="{StaticResource ToolboxList}"
+                     SelectionChanged="Category_SelectionChanged" />
+            <DockPanel Grid.Column="1">
+                <TextBox x:Name="ItemSearch" DockPanel.Dock="Top" Margin="0,0,0,4" Padding="6,3"
+                         Background="#FF3F3F46" Foreground="White" BorderBrush="#FF555555" BorderThickness="1"
+                         CaretBrush="White" TextChanged="ItemSearch_TextChanged" ToolTip="Filter items" />
+                <ListBox x:Name="ItemList" Style="{StaticResource ToolboxList}"
+                         PreviewMouseLeftButtonDown="ItemList_PreviewMouseLeftButtonDown"
+                         MouseMove="ItemList_MouseMove"
+                         MouseDoubleClick="ItemList_DoubleClick">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+    <!-- Play mode: blank panel with a centered note instead of greyed lists -->
+    <Border x:Name="PlayModeOverlay" Background="#FF252526" Visibility="Collapsed">
+        <TextBlock Text="Toolbox only works on edit mode." Foreground="#FF888888" FontSize="12"
+                   TextWrapping="Wrap" TextAlignment="Center"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16,0" />
+    </Border>
+    </Grid>
+</UserControl>

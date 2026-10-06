@@ -1,0 +1,1357 @@
+{
+  "Format": 1,
+  "App": "builder",
+  "Parts": [
+    {
+      "Name": "Baseplate",
+      "Shape": "Block",
+      "Position": [
+        0,
+        -0.5,
+        0
+      ],
+      "Size": [
+        5,
+        1,
+        5
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.64,
+        0.635,
+        0.647
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Spawn 9",
+      "Shape": "Block",
+      "Position": [
+        0.07484299,
+        -0.047914088,
+        0.17092949
+      ],
+      "Size": [
+        2,
+        0.5,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.75,
+        0.75,
+        0.78
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": true,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        0.20725662,
+        10.299999
+      ],
+      "Size": [
+        2,
+        1.126375,
+        13.563971
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        4.77726,
+        2.6655602,
+        5.9614067
+      ],
+      "Size": [
+        5.4774685,
+        2.5915415,
+        0.41659546
+      ],
+      "Rotation": [
+        -0,
+        19.530323,
+        -0
+      ],
+      "Color": [
+        0.76862746,
+        0.15686275,
+        0.10980392
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "TIP: hold jumping makes you jump higher!!",
+          "Face": "Back",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        2.66218,
+        15.327044
+      ],
+      "Size": [
+        2,
+        3.8636913,
+        3.5098848
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -4.309811,
+        2.6655602,
+        9.184736
+      ],
+      "Size": [
+        5.4774685,
+        2.5915415,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        -28.34259,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "you can climb walls...?",
+          "Face": "Back",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        4.3853836,
+        20.363626
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        4.3853836,
+        24.989948
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        4.3853836,
+        29.470583
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        -0.056806326,
+        4.3853836,
+        34.294933
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        3.8257735,
+        4.3853836,
+        38.874676
+      ],
+      "Size": [
+        9.76516,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.29411766,
+        0.5921569,
+        0.29411766
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        0.4307518,
+        4.369818,
+        49.74789
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        19.645077
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.9607843,
+        0.8039216,
+        0.1882353
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        3.6969779,
+        4.369818,
+        49.74789
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        19.645077
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.015686275,
+        0.6862745,
+        0.9254902
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        7.055184,
+        4.369818,
+        49.74789
+      ],
+      "Size": [
+        2,
+        0.4172821,
+        19.645077
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.76862746,
+        0.15686275,
+        0.10980392
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 10",
+      "Shape": "Block",
+      "Position": [
+        3.8257735,
+        4.3853836,
+        60.056835
+      ],
+      "Size": [
+        9.76516,
+        0.4172821,
+        2.1737204
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.29411766,
+        0.5921569,
+        0.29411766
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -4.163108,
+        6.736961,
+        41.68945
+      ],
+      "Size": [
+        5.4774685,
+        2.5915415,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        -28.34259,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "TIP: no checkpoints",
+          "Face": "Back",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Ball 13",
+      "Shape": "Ball",
+      "Position": [
+        3.2279658,
+        5.1991887,
+        63.081276
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Ball 13",
+      "Shape": "Ball",
+      "Position": [
+        2.2393756,
+        6.395781,
+        65.87725
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Ball 13",
+      "Shape": "Ball",
+      "Position": [
+        -0.087827325,
+        7.637058,
+        68.531876
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Ball 13",
+      "Shape": "Ball",
+      "Position": [
+        -2.8794365,
+        8.801186,
+        69.47281
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Ball 13",
+      "Shape": "Ball",
+      "Position": [
+        -5.4372983,
+        9.834669,
+        69.47281
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -4.163108,
+        8.371296,
+        41.68945
+      ],
+      "Size": [
+        5.4774685,
+        0.64187026,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        -28.34259,
+        0
+      ],
+      "Color": [
+        0.76862746,
+        0.15686275,
+        0.10980392
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "TIP: its red",
+          "Face": "Back",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -13.8742285,
+        10.127778,
+        70.0776
+      ],
+      "Size": [
+        13.447626,
+        0.44188976,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.95,
+        0.3,
+        0.3
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -9.560062,
+        13.896665,
+        70.0776
+      ],
+      "Size": [
+        0.58572054,
+        7.1436434,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.95,
+        0.3,
+        0.3
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -12.212681,
+        13.896665,
+        70.0776
+      ],
+      "Size": [
+        0.58572054,
+        7.1436434,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.95,
+        0.3,
+        0.3
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -15.223628,
+        13.896665,
+        70.0776
+      ],
+      "Size": [
+        0.58572054,
+        7.1436434,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.95,
+        0.3,
+        0.3
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -18.041828,
+        13.896665,
+        70.0776
+      ],
+      "Size": [
+        0.58572054,
+        7.1436434,
+        2
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.95,
+        0.3,
+        0.3
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -31.871826,
+        10.127778,
+        66.91181
+      ],
+      "Size": [
+        17.480263,
+        0.44188976,
+        8.331608
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        1,
+        0.6901961,
+        0
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": []
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -30.389559,
+        11.882184,
+        66.36071
+      ],
+      "Size": [
+        5.4774685,
+        2.5915415,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        90,
+        0
+      ],
+      "Color": [
+        0.6392157,
+        0.80784315,
+        0.15294118
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "CONGRATS!! you beat obby",
+          "Face": "Front",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -30.389559,
+        14.554582,
+        66.36071
+      ],
+      "Size": [
+        5.4774685,
+        2.5915415,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        90,
+        0
+      ],
+      "Color": [
+        0.9607843,
+        0.8039216,
+        0.1882353
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "this obby was obly made in 12 minss",
+          "Face": "Front",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 12",
+      "Shape": "Block",
+      "Position": [
+        -30.389559,
+        16.695484,
+        66.36071
+      ],
+      "Size": [
+        5.4774685,
+        1.4633543,
+        0.41659546
+      ],
+      "Rotation": [
+        0,
+        90,
+        0
+      ],
+      "Color": [
+        0.9607843,
+        0.8039216,
+        0.1882353
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": false,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [],
+      "Texts": [
+        {
+          "Text": "meshes coming soon",
+          "Face": "Front",
+          "Font": "Arial",
+          "Size": 124,
+          "Color": "255, 255, 255",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ]
+    },
+    {
+      "Name": "Block 14",
+      "Shape": "Block",
+      "Position": [
+        -28.416142,
+        12.815952,
+        72.38269
+      ],
+      "Size": [
+        3.6277294,
+        4.045924,
+        0.7740593
+      ],
+      "Rotation": [
+        0,
+        0,
+        0
+      ],
+      "Color": [
+        0.9490196,
+        0.9529412,
+        0.9529412
+      ],
+      "Material": "Plastic",
+      "Anchored": true,
+      "IsSpawn": false,
+      "Mass": 1,
+      "CanCollide": true,
+      "Transparency": 0,
+      "Reflectance": 0,
+      "CastShadow": true,
+      "DecalImage": null,
+      "DecalFace": "Front",
+      "DecalTransparency": 0,
+      "DecalBlur": 0,
+      "Decals": [
+        {
+          "Image": "C:\\Users\\Admin\\Pictures\\a.png",
+          "Face": "Back",
+          "Transparency": 0,
+          "Blur": 0,
+          "OffsetX": 0,
+          "OffsetY": 0,
+          "Scale": 1
+        }
+      ],
+      "Texts": []
+    }
+  ],
+  "Sun": {
+    "Direction": [
+      -0.4465967,
+      0.85137326,
+      0.27516353
+    ],
+    "Color": [
+      0.9182553,
+      0.9150081,
+      0.93189013
+    ],
+    "Intensity": 0.8602909,
+    "Shadows": true
+  },
+  "Atmosphere": {
+    "FogDensity": 0,
+    "FogColor": [
+      0.55,
+      0.62,
+      0.72
+    ],
+    "Haze": 0.012
+  },
+  "Ambient": 0.8840711,
+  "TimeOfDay": 9.890757,
+  "Camera": {
+    "Position": [
+      -0.97354573,
+      2.1810253,
+      1.0260062
+    ],
+    "Yaw": -721,
+    "Pitch": -39.75
+  }
+}

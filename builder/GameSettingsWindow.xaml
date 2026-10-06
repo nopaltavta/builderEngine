@@ -1,0 +1,201 @@
+<Window x:Class="builder.GameSettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Settings" Width="440" SizeToContent="Height"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        FontFamily="{StaticResource AppFont}" FontSize="12" Foreground="#FFD4D4D4"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType">
+    <Window.Resources>
+        <Style x:Key="DarkCombo" TargetType="ComboBox">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#FF3F3F46" />
+            <Setter Property="BorderBrush" Value="#FF555555" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="22" />
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="Box" Grid.ColumnSpan="2"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1" CornerRadius="2" />
+                            <ContentPresenter Grid.Column="0" Margin="6,0,0,0"
+                                              VerticalAlignment="Center"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              TextElement.Foreground="{TemplateBinding Foreground}" />
+                            <Path Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                  Data="M 0 0 L 4 4 L 8 0 Z" Fill="#FFCCCCCC" />
+                            <ToggleButton Grid.ColumnSpan="2" Background="Transparent" BorderThickness="0"
+                                          Focusable="False" ClickMode="Press"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Popup x:Name="Popup" Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True" Focusable="False" PopupAnimation="Slide">
+                                <Border Background="#FF252526" BorderBrush="#FF555555" BorderThickness="1"
+                                        MinWidth="{TemplateBinding ActualWidth}" MaxHeight="220">
+                                    <ScrollViewer SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" />
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DarkComboItem" TargetType="ComboBoxItem">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Padding" Value="6,3" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="Bd" Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter TextElement.Foreground="{TemplateBinding Foreground}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFE67E22" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FF6E3A0F" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TitleCloseButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#FFCCCCCC" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Width" Value="36" />
+            <Setter Property="Height" Value="24" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFC42B1C" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border x:Name="Root" Background="#FF252526" CornerRadius="0">
+        <DockPanel>
+            <Grid DockPanel.Dock="Top" Height="38" Background="#FFE67E22"
+                  MouseLeftButtonDown="TitleBar_MouseDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Game Settings" Foreground="White" FontWeight="SemiBold"
+                           VerticalAlignment="Center" Margin="14,0,0,0" />
+                <Button Grid.Column="1" Content="✕" Margin="0,0,8,0" VerticalAlignment="Center"
+                        Style="{StaticResource TitleCloseButton}" ToolTip="Close (Esc)"
+                        Click="Close_Click" Cursor="Arrow" />
+            </Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="560">
+            <StackPanel Margin="16,10,16,14">
+                <CheckBox x:Name="CheckShadows" Content="Sun shadows" Foreground="#FFD4D4D4" Margin="8,2" Click="GeneralCheck_Click" />
+                <CheckBox x:Name="CheckMsaa" Content="MSAA 4x anti-aliasing" Foreground="#FFD4D4D4" Margin="8,2" Click="GeneralCheck_Click" />
+                <CheckBox x:Name="CheckInvertY" Content="Invert look Y" Foreground="#FFD4D4D4" Margin="8,2,8,8" Click="GeneralCheck_Click" />
+                <TextBlock Text="Shadow quality" Foreground="#FFCCCCCC" Margin="8,2,0,2" />
+                <RadioButton x:Name="RadioShadowLowest" Content="Lowest (256)" Foreground="#FFD4D4D4" Margin="16,2" Checked="ShadowQuality_Checked" />
+                <RadioButton x:Name="RadioShadowLow" Content="Low (512)" Foreground="#FFD4D4D4" Margin="16,2" Checked="ShadowQuality_Checked" />
+                <RadioButton x:Name="RadioShadowMed" Content="Normal (1024)" Foreground="#FFD4D4D4" Margin="16,2" Checked="ShadowQuality_Checked" />
+                <RadioButton x:Name="RadioShadowHigh" Content="High (2048)" Foreground="#FFD4D4D4" Margin="16,2" Checked="ShadowQuality_Checked" />
+                <RadioButton x:Name="RadioShadowUltra" Content="Ultra (4096)" Foreground="#FFD4D4D4" Margin="16,2" Checked="ShadowQuality_Checked" />
+                <Grid Margin="8,8,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Fog density" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="FogSlider" Grid.Column="1" Minimum="0" Maximum="0.05"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="FogSlider_Changed" />
+                    <TextBlock x:Name="FogValue" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                    <TextBlock Grid.Row="1" Text="Selection glow" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="GlowSlider" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="1"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="GlowSlider_Changed" />
+                    <TextBlock x:Name="GlowValue" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                    <TextBlock Grid.Row="2" Text="Contrast" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="ContrastSlider" Grid.Row="2" Grid.Column="1" Minimum="0.2" Maximum="2"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="ContrastSlider_Changed" />
+                    <TextBlock x:Name="ContrastValue" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                    <TextBlock Grid.Row="3" Text="Shadow distance" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <ComboBox x:Name="ShadowDistanceBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+                              VerticalAlignment="Center" Margin="8,0"
+                              Style="{StaticResource DarkCombo}" ItemContainerStyle="{StaticResource DarkComboItem}"
+                              SelectionChanged="ShadowDistanceBox_SelectionChanged">
+                        <ComboBoxItem>Lowest (10)</ComboBoxItem>
+                        <ComboBoxItem>Low (15)</ComboBoxItem>
+                        <ComboBoxItem>Normal (20)</ComboBoxItem>
+                        <ComboBoxItem>High (60)</ComboBoxItem>
+                        <ComboBoxItem>Ultra (90)</ComboBoxItem>
+                        <ComboBoxItem>Maximum (120)</ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+                <TextBlock Text="Sky" Foreground="White" FontWeight="SemiBold" Margin="8,10,0,4" />
+                <WrapPanel x:Name="SkyPresetPanel" Margin="8,0,0,0" />
+                <TextBlock x:Name="SkyPresetHint" Foreground="#FF888888" FontSize="11" Margin="8,4,0,0" TextWrapping="Wrap" />
+                <TextBlock Text="Avatar" Foreground="White" FontWeight="SemiBold" Margin="8,10,0,4" />
+                <Grid Margin="8,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="52" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="52" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Red" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="AvatarRSlider" Grid.Column="1" Minimum="0" Maximum="255"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="AvatarSlider_Changed" />
+                    <TextBlock x:Name="AvatarRValue" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                    <Border x:Name="AvatarPreview" Grid.Column="3" Grid.RowSpan="3" Width="40" Height="40"
+                            VerticalAlignment="Center" Margin="8,0,0,0"
+                            BorderBrush="#FF555555" BorderThickness="1" />
+                    <TextBlock Grid.Row="1" Text="Green" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="AvatarGSlider" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="255"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="AvatarSlider_Changed" />
+                    <TextBlock x:Name="AvatarGValue" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                    <TextBlock Grid.Row="2" Text="Blue" VerticalAlignment="Center" Foreground="#FFCCCCCC" />
+                    <Slider x:Name="AvatarBSlider" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="255"
+                            VerticalAlignment="Center" Margin="8,0" ValueChanged="AvatarSlider_Changed" />
+                    <TextBlock x:Name="AvatarBValue" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Foreground="#FFCCCCCC" FontFamily="Consolas" FontSize="11" />
+                </Grid>
+                <CheckBox x:Name="CheckBlocky" Content="Blocky animated avatar (beta)" Foreground="#FFD4D4D4" Margin="8,8,0,0" Click="BlockyCheck_Click"
+                          ToolTip="Roblox-style character with walk, jump, fall and swim animation. Off = classic capsule." />
+            </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+    </Border>
+</Window>

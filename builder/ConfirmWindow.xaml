@@ -1,0 +1,71 @@
+<Window x:Class="builder.ConfirmWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Builder Studio" Width="340" SizeToContent="Height"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        FontFamily="{StaticResource AppFont}" FontSize="12" Foreground="#FFD4D4D4"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType">
+    <Window.Resources>
+        <Style x:Key="TitleCloseButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#FFCCCCCC" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Width" Value="36" />
+            <Setter Property="Height" Value="24" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="#FFC42B1C" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border x:Name="Root" Background="#FF252526" CornerRadius="0">
+        <DockPanel>
+            <Grid DockPanel.Dock="Top" Height="38" Background="#FFE67E22"
+                  MouseLeftButtonDown="TitleBar_MouseDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="builder engine" Foreground="White" FontWeight="SemiBold"
+                           VerticalAlignment="Center" Margin="14,0,0,0" />
+                <Button Grid.Column="1" Content="✕" Margin="0,0,8,0" VerticalAlignment="Center"
+                        Style="{StaticResource TitleCloseButton}" ToolTip="No (Esc)"
+                        Click="No_Click" />
+            </Grid>
+            <StackPanel Margin="16,12,16,14">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Icons/question.png" Width="28" Height="28" VerticalAlignment="Top" Margin="0,0,12,0"
+                           RenderOptions.BitmapScalingMode="HighQuality" />
+                    <TextBlock x:Name="MessageText" Grid.Column="1" Text="Are you sure you want to close builder engine?"
+                               Foreground="#FFD4D4D4" TextWrapping="Wrap" VerticalAlignment="Center" />
+                </Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,14,0,0">
+                    <Button Content="Yes" Width="80" Padding="0,4" Margin="0,0,8,0"
+                            Background="#FFE67E22" Foreground="White" BorderThickness="0"
+                            Click="Yes_Click" IsDefault="True" />
+                    <Button Content="No" Width="80" Padding="0,4"
+                            Background="#FF3F3F46" Foreground="White" BorderBrush="#FF555555" BorderThickness="1"
+                            Click="No_Click" IsCancel="True" />
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+    </Border>
+</Window>
